@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster ISTAT — Pagina unica</title>
+  <style>
+    body {
+      margin: 0;
+      background: #071a2d;
+      color: #F4F4F4;
+      font-family: Georgia, serif;
+    }
+    .wrapper {
+      width: 100%;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 16px 16px 32px 16px;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 8px 0 20px 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+        .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 18px;
+      margin: 0 0 12px 0;
+      color: #8ED9C5;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background: #071a2d;
+      display: block;
+    }
+    .dashboard-frame {
+      height: 1340px;
+    }
+    .race-frame {
+      height: 930px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Poster ISTAT — Visualizzazione completa</h1>
+
+    <div class="section">
+      <div class="section-title">Dashboard principale</div>
+      <iframe class="dashboard-frame" src="dashboard_poster_istat.html"></iframe>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Bar chart race — Posti letto per 1.000 abitanti</div>
+      <iframe class="race-frame" src="quinto_grafico_bar_race.html"></iframe>
+    </div>
+  </div>
+</body>
+</html>
