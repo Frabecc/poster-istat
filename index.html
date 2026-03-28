@@ -23,7 +23,7 @@
       font-size: 28px;
       font-weight: 700;
     }
-        .section {
+    .section {
       margin-bottom: 40px;
     }
     .section-title {
@@ -44,6 +44,51 @@
     .race-frame {
       height: 930px;
     }
+    .mobile-links {
+      display: none;
+    }
+    .mobile-note {
+      display: none;
+    }
+    .link-card {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      color: #F4F4F4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .link-card:hover {
+      background: rgba(255,255,255,0.14);
+    }
+    @media (max-width: 900px) {
+      .dashboard-frame,
+      .race-frame {
+        display: none;
+      }
+      .mobile-links,
+      .mobile-note {
+        display: block;
+      }
+      h1 {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      .section-title {
+        font-size: 16px;
+      }
+      .wrapper {
+        padding: 14px;
+      }
+      .mobile-note {
+        margin-top: 10px;
+        color: #8ED9C5;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -53,11 +98,20 @@
     <div class="section">
       <div class="section-title">Dashboard principale</div>
       <iframe class="dashboard-frame" src="dashboard_poster_istat.html"></iframe>
+      <div class="mobile-links">
+        <a class="link-card" href="dashboard_poster_istat.html" target="_blank">Apri dashboard</a>
+      </div>
+      <div class="mobile-note">
+        Da telefono conviene aprire il grafico in una pagina dedicata e ruotare il dispositivo in orizzontale.
+      </div>
     </div>
 
     <div class="section">
       <div class="section-title">Bar chart race — Posti letto per 1.000 abitanti</div>
       <iframe class="race-frame" src="quinto_grafico_bar_race.html"></iframe>
+      <div class="mobile-links">
+        <a class="link-card" href="quinto_grafico_bar_race.html" target="_blank">Apri bar chart race</a>
+      </div>
     </div>
   </div>
 </body>
