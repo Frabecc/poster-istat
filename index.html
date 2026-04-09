@@ -31,6 +31,42 @@
       margin: 0 0 12px 0;
       color: #8ED9C5;
     }
+    .intro-card {
+      display: none;
+      max-width: 980px;
+      margin: 10px auto 34px auto;
+      padding: 22px 24px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+    .intro-title {
+      margin: 0 0 14px 0;
+      font-size: 24px;
+      color: #8ED9C5;
+    }
+    .intro-text {
+      margin: 0 0 12px 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #F4F4F4;
+    }
+    .intro-actions {
+      margin-top: 18px;
+    }
+    .intro-button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.10);
+      color: #F4F4F4;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .intro-button:hover {
+      background: rgba(255,255,255,0.16);
+    }
     iframe {
       width: 100%;
       border: none;
@@ -70,7 +106,8 @@
         display: none;
       }
       .mobile-links,
-      .mobile-note {
+      .mobile-note,
+      .intro-card {
         display: block;
       }
       h1 {
@@ -89,6 +126,18 @@
         font-size: 14px;
         line-height: 1.4;
       }
+      .intro-card {
+        padding: 18px 16px;
+        margin: 8px 0 26px 0;
+      }
+      .intro-title {
+        font-size: 20px;
+        line-height: 1.25;
+      }
+      .intro-text {
+        font-size: 15px;
+        line-height: 1.5;
+      }
     }
   </style>
 </head>
@@ -96,10 +145,20 @@
   <div class="wrapper">
     <h1>Poster ISTAT — Visualizzazione completa</h1>
 
-    <div class="section">
+    <div class="intro-card">
+      <h2 class="intro-title">Avvertenza per la consultazione interattiva</h2>
+      <p class="intro-text">Tutti i grafici presenti in questa pagina sono interattivi. È possibile toccarli o passarvi sopra per visualizzare informazioni aggiuntive, inclusa una curiosità dedicata all’Emilia-Romagna nella mappa interattiva.</p>
+      <p class="intro-text">I grafici possono inoltre essere ingranditi ed esplorati tramite zoom. Per tornare rapidamente alla visualizzazione iniziale, è possibile utilizzare il doppio tocco oppure i comandi di reset presenti nella barra degli strumenti del grafico.</p>
+      <p class="intro-text">Da smartphone, per una consultazione più chiara e completa, si consiglia di ruotare il dispositivo in orizzontale e di aprire ciascun grafico nella relativa pagina dedicata.</p>
+      <div class="intro-actions">
+        <a class="intro-button" href="#contenuti-interattivi">Prosegui alla visualizzazione</a>
+      </div>
+    </div>
+
+    <div id="contenuti-interattivi" class="section">
       <div class="section-title">Dashboard principale</div>
       <div class="mobile-note">
-        Per una corretta visualizzazione da smartphone, si consiglia di aprire ciascun grafico nella relativa pagina dedicata e di ruotare il dispositivo in orizzontale.
+        Da smartphone, si consiglia di aprire il grafico nella relativa pagina dedicata e di ruotare il dispositivo in orizzontale.
       </div>
       <iframe class="dashboard-frame" src="dashboard_poster_istat.html"></iframe>
       <div class="mobile-links">
